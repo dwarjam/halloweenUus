@@ -1,0 +1,105 @@
+:root{
+    --yellow: #fff7c2;
+    --orange: #de774e;
+    --darkorange: #a34a28;
+    --darkpurple: #684656;
+    --black: #1c1124;
+}
+
+html{
+    box-sizing: border-box;
+    font-weight: 700;
+    color: var(--black);
+}
+
+body{
+    background: linear-gradient(to right, var(--yellow), var(--orange), var(--darkorange), var(--darkpurple));
+    margin: 20px;
+}
+
+.wrapper{
+    display: grid;
+    gap: 20px;
+}
+
+.top{
+    display: grid;
+    gap: 20px;
+    grid-template-areas:
+    "party party cta1"
+    "party party cta2"
+}
+
+.party{
+    grid-area: party;
+    min-height: 450px;
+    background-image: url('../images/doghosts.jpg');
+    background-size: cover;
+    background-position: right;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: end;
+}
+
+.party > *{
+    background: var(--yellow);
+    padding: 5px;
+    font-family: 'Poiret One', cursive;
+}
+
+.cta{
+    background: var(--yellow);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+}
+
+.cta1{
+    grid-area: cta1;
+}
+
+.cta2{
+    grid-area: cta2;
+}
+
+.price{
+    font-size: 1,5rem;
+    font-weight: 300;
+}
+
+.cta p{
+    margin: 0;
+}
+
+button{
+    background: var(--yellow);
+    border: 0;
+    padding: 20px;
+}
+
+.menu ul{
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.menu a{
+    background: var(--yellow);
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+    text-transform: uppercase;
+    font-size: 1,5rem;
+}
+
+/* hide menu buttons */
+[aria-controls="menu-list"]{
+    display: none;
+}
